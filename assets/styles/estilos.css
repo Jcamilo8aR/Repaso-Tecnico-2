@@ -1,0 +1,33 @@
+.banner{
+    background-image: url(../img/ferrariWP.jpg);
+    background-position: top center;
+    background-size: cover; /*CUPA TODO EL ESPACIO DISPONIBLE */
+    padding: 30% 10% 30% 5%;
+    background-attachment: fixed;  /*AL BAJAR EN LA PAGINA EL BANNER NO SE MUEVE */
+    position: relative;
+    z-index: 1;
+}
+
+.banner::after{  /*ANTES DEL BANNER (CORTINA)*/
+    content: ''; /*PODEMOS PONER COSAS COMO PALABRAS, PERO ES MEJOR PONERLO CON HTML */
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;  /*MANDA LA CORTINA AL FONDO */
+    top: 0;  /*EMPAREJA CON LAS MARGENES */
+    left: 0;  /*EMPAREJA CON LAS MARGENES */
+    opacity: 0.4;
+}
+
+
+.menuPrincipal{
+    background-color: transparent !important;
+    transition: 2s;
+}
+
+
+.menuSecundario{
+    background-color: black !important;
+    transition: 2s;
+}
